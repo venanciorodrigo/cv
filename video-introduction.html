@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Rodrigo Venancio — Video Introduction</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        --bg: #1e1e1e;
+        --surface: #2a2a2a;
+        --text: #e8e8e8;
+        --muted: #9a9a9a;
+        --accent: #4a9eff;
+        --border: #3a3a3a;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 0.75rem 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+
+      .title h1 {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+      }
+
+      .title span {
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
+      .actions {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.45rem 0.85rem;
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--text);
+        background: transparent;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.15s ease, border-color 0.15s ease;
+      }
+
+      .btn:hover {
+        background: #333;
+        border-color: #4a4a4a;
+      }
+
+      .btn.primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+      }
+
+      .btn.primary:hover {
+        background: #3a8eef;
+        border-color: #3a8eef;
+      }
+
+      main {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.25rem;
+        background: #000;
+      }
+
+      .player {
+        width: 100%;
+        height: 100%;
+        max-width: 1280px;
+        max-height: 100%;
+        object-fit: contain;
+        background: #000;
+        outline: none;
+      }
+
+      @media (max-width: 540px) {
+        header {
+          padding: 0.6rem 0.85rem;
+        }
+        .title h1 {
+          font-size: 0.92rem;
+        }
+        .btn {
+          padding: 0.4rem 0.65rem;
+          font-size: 0.78rem;
+        }
+        main {
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <h1>Rodrigo Venancio — Video Introduction</h1>
+        <span>video-introduction.mp4</span>
+      </div>
+      <div class="actions">
+        <a
+          class="btn"
+          href="video-introduction.mp4"
+          target="_blank"
+          rel="noopener"
+          >Open in new tab</a
+        >
+        <a class="btn primary" href="video-introduction.mp4" download
+          >Download</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <video
+        class="player"
+        src="video-introduction.mp4"
+        controls
+        playsinline
+        preload="metadata"
+      >
+        Your browser can't play this video.
+        <a href="video-introduction.mp4">Download the video</a> instead.
+      </video>
+    </main>
+  </body>
+</html>
